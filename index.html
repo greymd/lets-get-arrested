@@ -1,6 +1,17 @@
 <script>
-  for ( i=1; 1; i++) {
-    var s = "💩"
-    alert(s.repeat(i));
+  function unkoTower(level) {
+    var padding = "　"
+    var left = padding.repeat(level)
+    var result = left + "人"
+    var mid = ""
+    for (j = level - 1; j > 0; j--) {
+      left = padding.repeat(j)
+      mid = padding.repeat(level-j)
+      result = result + "\n" + left + "（" + mid + padding + mid + "）"
+    }
+    return result
+  }
+  for ( i = 3; 1; i++) {
+    alert(unkoTower(i));
   }
 </script>
